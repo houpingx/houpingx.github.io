@@ -1,0 +1,245 @@
+body
+{
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;     
+}
+
+.navbar-custom
+{
+    border-left: none;
+    border-right: none;
+    border-top: maroon 10px solid;
+    border-radius: 0px;
+    background: #FFF;
+}
+
+.navbar-default .navbar-nav>li>a
+{
+    font-size:16px;
+    font-family: "Arial Narrow";
+    font-weight: 900;
+    margin:22px;
+    margin-top:25px;
+    padding: 0px;
+    color: #636365;
+    border-bottom:white 3px solid;
+    
+}
+
+.navbar-default .navbar-nav>li>a:hover
+{
+    border-bottom:maroon 3px solid;   
+}
+
+.navtitle
+{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family:sans-serif;
+    font-size:16px;
+    font-weight: 900;
+    background: #444;
+    color: #FFF;
+    text-align: center;
+}
+
+.refbox
+{
+    margin-top:20px;
+    margin-bottom:30px;
+    color: #333;
+}
+
+A.research
+{
+    color: #000;
+    font-weight: 600;
+}
+
+A.research:hover
+{
+    color: #006;
+    text-decoration: none;
+}
+
+.journal { font-weight: 600; color: maroon;}
+.award { font-weight: 600; color: rgb(25,101,170);}
+.conference { font-weight: 600; color: olive;}
+.patent { font-weight: 600; color: orange;}
+
+.label-keyword
+{ background-color:#AAA; }
+
+.label-highlight
+{ background-color:#E63; }
+
+.label-selected {}
+
+.label-download
+{ background-color:#666; }
+
+.label-boothreview
+{
+  background-color: #69B;
+}
+
+.pagesection {}
+.sectionlink {}
+
+.label a { color: #FFF; }
+
+#plotboxfull {
+    position: absolute;
+    padding:5px 7px 4px 8px;
+    bottom: 15px;
+    right: 25px;
+    z-index: 90;
+    border: solid 1px #CCC;
+    color: #666;
+    border-radius: 4px;
+    background-color: #EEE;
+    cursor: pointer;
+}
+
+#plotboxfull:hover {
+    background-color: #DDD;
+}
+
+.plotboxfs {
+    position: absolute;
+    z-index: 200;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color:#FFF;
+    padding:20px;
+    box-sizing: border-box;
+}
+
+
+
+
+
+#fp-nav {
+    position: fixed;
+    z-index: 100;
+    margin-top: -32px;
+    top: 50%;
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+}
+#fp-nav.right {
+    right: 17px;
+}
+#fp-nav.left {
+    left: 17px;
+}
+.fp-slidesNav{
+    position: absolute;
+	width: 98%;
+    z-index: 4;
+    opacity: 1;
+	left: 50%;
+	background-color:#000;
+	opacity: 0.8;
+	border-radius: 5px;max-width: 500px;
+}
+.fp-slidesNav.bottom {
+    bottom: 17px;
+}
+.fp-slidesNav.top {
+    top: 17px;
+}
+#fp-nav ul,
+.fp-slidesNav ul {
+  margin: 0;
+  padding: 0;
+}
+#fp-nav ul li,
+.fp-slidesNav ul li {
+    display: block;
+    width: 14px;
+    height: 13px;
+    margin: 10px 3px;
+    position:relative;
+}
+.fp-slidesNav ul li {
+    display: inline-block;
+}
+#fp-nav ul li a,
+.fp-slidesNav ul li a {
+    display: block;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height:50%;
+    cursor: pointer;
+    text-decoration: none;
+}
+#fp-nav ul li a.active span,
+.fp-slidesNav ul li a.active span,
+#fp-nav ul li:hover a.active span,
+.fp-slidesNav ul li:hover a.active span{
+    height: 20px;
+    width: 20px;
+    margin: -10px 0 0 -10px;
+    border-radius: 100%;
+ }
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    height: 8px;
+    width: 8px;
+    border: solid 2px #900;
+    background: #E63;
+    left: 50%;
+    top: 50%;
+    margin: -4px 0px 0px -4px;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+#fp-nav ul li:hover a span,
+.fp-slidesNav ul li:hover a span{
+    width: 14px;
+    height: 14px;
+    margin: -7px 0px 0px -7px;
+}
+#fp-nav ul li .fp-tooltip {
+    position: absolute;
+    top: -12px;
+    color: #fff;
+	background-color:#333;
+	padding:5px;
+    font-size: 16px;
+    font-family: arial, helvetica, sans-serif;
+    white-space: nowrap;
+    max-width: 220px;
+    overflow: hidden;
+    display: block;
+    opacity: 0;
+    width: 0;
+    cursor: pointer;
+}
+#fp-nav ul li:hover .fp-tooltip,
+#fp-nav.fp-show-active a.active + .fp-tooltip {
+    -webkit-transition: opacity 0.2s ease-in;
+    transition: opacity 0.2s ease-in;
+    width: auto;
+    opacity: 1;
+}
+#fp-nav ul li .fp-tooltip.right {
+    right: 20px;
+}
+#fp-nav ul li .fp-tooltip.left {
+    left: 20px;
+}
+
+
+
+
