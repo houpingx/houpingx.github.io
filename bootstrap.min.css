@@ -4509,7 +4509,6 @@ a.thumbnail:hover,a.thumbnail:focus,a.thumbnail.active{
     position:relative;
     display:block;
     padding:3px 10px;
-    /*width:90%;*/
     margin-bottom:-1px;
     background-color:#ffffff;
     border:1px solid #dddddd

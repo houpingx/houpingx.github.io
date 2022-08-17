@@ -1,0 +1,180 @@
+/*
+Theme Name:     Twenty Twelve for PSU
+Description:    A modified Twenty Twelve child theme that adheres to Penn State's AD54 policy and complies with accessibility guidelines. It includes the official mark, standardized search, and footer links. It's fully responsive and features a customizable front page.
+Author:         Audrey Romano, Nick Rossi, TLT, Penn State
+Author URI:     http://tlt.psu.edu/
+Template:       twentytwelve
+Version:        1.1
+*/
+
+@import url("../twentytwelve/style.css");
+
+#psumark {
+	margin: 0 auto;
+	width: 218px;
+}
+
+/* Adjust the size of the mark image */
+#psumark img {
+  width: 218px;
+}
+
+/* Maybe the header 1s shouldn't be so bold - it's competing with the mark which is bad. */
+h1.site-title{
+  font-weight: normal;
+  padding-top: 3px;
+}
+
+a {
+  color:#1773cb;
+}
+
+.bypostauthor cite span {
+	background-color: #1773cb;
+}
+
+.site-header{
+  padding-top:30px;
+}
+
+.site-header h1 a:hover,
+.site-header h2 a:hover {
+	color: #1773cb;
+}
+
+.widget-area .widget a:hover {
+	color: #1773cb;
+}
+
+.comments-link a:hover,
+.entry-meta a:hover {
+	color: #1773cb;
+}
+
+.format-status .entry-header header a:hover {
+	color: #1773cb;
+}
+
+.comments-area article header a:hover {
+	color: #1773cb;
+}
+
+a.comment-reply-link:hover,
+a.comment-edit-link:hover {
+	color: #1773cb;
+}
+
+.template-front-page .widget-area .widget li a:hover {
+	color: #1773cb;
+}
+
+.header-search {
+    float: right;
+    margin-top: -62px;
+}
+
+ul.ad54-search-links {
+	font-size: 0.8em;
+	text-align: center;
+	margin-top: 1em;
+	list-style: none outside none;
+}
+
+ul.ad54-search-links li {
+    margin-left: 1em;
+    display: inline;
+    border-left: 1px solid #EDEDED;
+    padding-left:1em;
+    }
+
+ul.ad54-search-links li.first {
+    margin-left: 0;
+    border-left: medium none;
+    padding-left: 0;
+}
+
+ul.ad54-search-links a {
+	color: #444;
+	text-decoration: none;
+}
+
+ul.psu-links {
+    list-style: none outside none;
+}
+
+footer[role="contentinfo"] .psu-links a {
+	display: block;
+}
+
+footer[role="contentinfo"] ul.menu ul {
+	margin-left: 12px;
+	margin-left: 0.857142857rem;
+}
+
+div.footer-logo{
+  float: left;
+  margin-right: 30px;
+  margin-bottom: 5px;
+}
+
+div.footer-logo a img{
+  width: 100px;
+}
+
+/* =Media queries
+-------------------------------------------------------------- */
+/* Maximum width of 650 pixels. */
+@media screen and (max-width: 650px) {
+    .header-search {
+        margin-top:5px;
+        text-align:center;
+        float:none;
+    }
+    .main-navigation {
+        clear:both;
+    }
+    
+    #psumark{
+        margin-bottom: 15px;
+    }
+    div.footer-logo{
+      float: none;
+    }
+    
+}
+
+/* Minimum width of 600 pixels. */
+@media screen and (min-width: 600px) {
+	#psumark {
+		position: absolute;
+		float: left;
+		width: 122px;
+	}
+	
+	#site-stuff {
+		position: relative;
+		margin-left: 260px;
+	}
+	
+	.site-header h1 {
+		line-height: 1.8;
+	}
+	
+	ul.ad54-search-links {
+		float: right;
+		margin-top: 0;
+	}
+	
+	footer[role="contentinfo"] .psu-links a {
+	    margin-left: 1em;
+	    display: inline;
+	    border-left: 1px solid #EDEDED;
+	    padding-left:1em;
+	}
+	
+	footer[role="contentinfo"] .psu-links > a:first-child {
+	    margin-left: 0;
+	    border-left: medium none;
+	    padding-left: 0;
+	}
+}
